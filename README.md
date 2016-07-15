@@ -194,6 +194,9 @@ See also:
 
 Create the reports on stream end.
 
+The default coverage variable of istanbul is `__coverage__`, so if you process pre instrumented code you can simply set  `coverageVariable: '__coverage__'` to generate a report without the need to call `istanbul()` before. This way you can use the webpack `istanbul-instrumenter-loader` to instrument you code before you generate the coverage report.
+
+
 #### opt
 Type: `Object` (optional)
 ```js
@@ -204,6 +207,7 @@ Type: `Object` (optional)
   coverageVariable: 'someVariable'
 }
 ```
+
 
 You can pass individual configuration to a reporter.
 ```js
